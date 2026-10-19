@@ -11,6 +11,6 @@ This skill lives in the personal skills Git repository. Resolve the repository r
 2. Put each skill in skills/<name>/SKILL.md with matching lowercase-hyphen name and a clear description of when it applies. Preserve supplied instructions; record upstream attribution/license if known. Ask for missing provenance before publishing externally.
 3. Remove disable-model-invocation when automatic selection is desired. Automatic selection is not always-on: only add a skill name to always-on.json when the user wants its full text included in every session.
 4. Keep supplementary Markdown in that skill's references/ directory and link to it with reading instructions.
-5. Run python3 -m unittest discover -s tests, then python3 scripts/install.py. The installer discovers all skills automatically; do not maintain a separate skill link list.
+5. Use Ruby for scripts by default; use Rust when portability calls for it. Run ruby tests/test_install.rb, then ruby scripts/install.rb. The installer discovers all skills automatically; do not maintain a separate skill link list.
 6. Do not overwrite conflicting files or links. Explain any conflict. Preserve existing personal instructions outside the managed block.
 7. Report changed paths and remind the user to reload/restart agents. Commit/push only when requested or authorized by the current task.

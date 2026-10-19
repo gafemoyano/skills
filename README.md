@@ -4,12 +4,12 @@ Curated Markdown skills and always-on principles for gafemoyano.
 
 ## Install on another machine
 
-Requires Git and Python 3.9+:
+Requires Git and Ruby 3.1+. The installer uses only Ruby's standard library; tests use Minitest (bundled with many Ruby installations, or install with `gem install minitest`).
 
 ```sh
 git clone git@github.com:gafemoyano/skills.git ~/skills
 cd ~/skills
-python3 scripts/install.py
+ruby scripts/install.rb
 ```
 
 After pulling updates or adding skills, run the installer again. It is idempotent: it links every skills/*/SKILL.md directory into ~/.agents/skills (Pi, Codex, Amp) and ~/.claude/skills. Requires agent versions supporting these locations. Existing unrelated skills are untouched; conflicting names fail safely.
@@ -28,6 +28,10 @@ Existing AGENTS.override.md files take precedence where applicable. Only the man
 
 The testing principle is always-on. Design red flags, boundary discipline, and model the domain are conditional.
 
+## Scripting
+
+Use Ruby by default. Use Rust when portability calls for it.
+
 ## Add skills
 
 Ask an agent to use the maintain-skills skill, or:
@@ -37,8 +41,8 @@ Ask an agent to use the maintain-skills skill, or:
 3. For guidance that must be loaded every session, add its name to always-on.json.
 4. Run:
    ```sh
-   python3 -m unittest discover -s tests
-   python3 scripts/install.py
+   ruby tests/test_install.rb
+   ruby scripts/install.rb
    ```
 5. Commit and push to sync other machines, then pull and reinstall there.
 
