@@ -1,11 +1,11 @@
 ---
-name: maintain-agent-kit
-description: "Add or update personal skills, references, or always-on principles in gafemoyano/agent-kit and install them across Pi, Codex, Claude Code, and Amp. Use when the user pastes a skill or asks to maintain their personal agent guidance."
+name: maintain-skills
+description: "Add or update personal skills, references, or always-on principles in gafemoyano/skills and install them across Pi, Codex, Claude Code, and Amp. Use when the user pastes a skill or asks to maintain their personal agent guidance."
 ---
 
 # Maintain personal agent guidance
 
-This skill lives in the personal agent-kit Git repository. Resolve the repository root two directories above this skill directory, following symlinks. Do not assume the checkout is always at ~/agent-kit.
+This skill lives in the personal skills Git repository. Resolve the repository root two directories above this skill directory, following symlinks. Do not assume the checkout is always at ~/skills.
 
 1. Read README.md and AGENTS.md at the repository root.
 2. Put each skill in skills/<name>/SKILL.md with matching lowercase-hyphen name and a clear description of when it applies. Preserve supplied instructions; record upstream attribution/license if known. Ask for missing provenance before publishing externally.

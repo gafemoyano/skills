@@ -1,4 +1,4 @@
-# Personal agent kit
+# Personal skills
 
 Curated cross-agent skills for gafemoyano. See README.md for installation.
 
