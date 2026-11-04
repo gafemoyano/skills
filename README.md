@@ -32,6 +32,10 @@ The testing principle is always-on. Design red flags, boundary discipline, and m
 
 Use Ruby by default. Use Rust when portability calls for it.
 
+## Amp orbs
+
+`.agents/setup` installs Ruby 3.1+ and Minitest when missing, then runs the skill installer. Amp caches the prepared environment in project snapshots; warm setup skips package installation. No resume hook is needed because this repository has no services or authentication to restore.
+
 ## Add skills
 
 Ask an agent to use the maintain-skills skill, or:
@@ -51,6 +55,8 @@ In Pi run /reload. Restart other agents to ensure discovery.
 ## Provenance
 
 The design-red-flags, testing, boundary-discipline, and model-the-domain texts were supplied by the user from an unspecified third-party source. Upstream URL, author, and license are pending. No ownership or redistribution license is asserted for that text. Keep this repository private pending a license review.
+
+The antfu-simplify text was supplied by the user, attributed to Anthony Fu, version 2026.10.31. Its upstream URL and license are pending; the same private-repository restriction applies.
 
 ## Uninstall
 
