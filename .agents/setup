@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+cd "$(dirname "${BASH_SOURCE[0]}")/.."
+
+echo 'Checking Ruby and Minitest prerequisites'
+started=$SECONDS
+packages=()
+if ! command -v ruby >/dev/null || ! ruby -e 'exit(Gem::Version.new(RUBY_VERSION) >= Gem::Version.new("3.1") ? 0 : 1)'; then
+  packages+=(ruby)
+fi
+if ! command -v ruby >/dev/null || ! ruby -e 'require "minitest"' 2>/dev/null; then
+  packages+=(ruby-minitest)
+fi
+if ((${#packages[@]})); then
+  sudo apt-get update
+  sudo env DEBIAN_FRONTEND=noninteractive apt-get install -y "${packages[@]}"
+fi
+ruby --version
+ruby -e 'require "minitest"; puts "Minitest #{Minitest::VERSION}"'
+echo "Prerequisites ready in $((SECONDS - started))s"
+
+echo 'Installing repository skills'
+started=$SECONDS
+ruby scripts/install.rb
+echo "Skills installed in $((SECONDS - started))s"
