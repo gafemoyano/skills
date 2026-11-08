@@ -32,7 +32,7 @@ Pick the tool that answers the question at the lowest cost: a model checker, a p
 
 Write a project-local skill with frontmatter that names the area and says when to use it. Without frontmatter, the skill never registers. From the skill alone, the next agent must be able to tell whether a change touches the verified code, run the check, tell a real bug from a modeling error, and update the verification when a change is intended. Put the coverage record and the sync commit in the skill, and tell the next agent to move the sync commit forward only after it confirms that the verification describes the code at the new commit. Use this repo's real commands, paths, and nouns, and leave no placeholders.
 
-If the check is a TLA+ model and the pstack `/statechart` skill is available, tell the next agent to use it to read every result. It shows each invariant violation the checker finds as its shortest path in plain words and charts state transitions when the check passes. Refer to it by name; do not copy its commands, options, or file paths into the generated skill or its scripts. If it is unavailable, explain counterexample traces in plain words and describe the checked state transitions directly.
+If the check is a TLA+ model, tell the next agent to use `checking-statecharts` to read every result. It shows each invariant violation the checker finds as its shortest path in plain words and charts state transitions when the check passes. Refer to it by name; do not copy its commands, options, or file paths into the generated skill or its scripts.
 
 ## Prove it before you hand off
 
@@ -40,8 +40,8 @@ Follow the generated skill once, as the next agent would, on a scratch change th
 
 ## Hand off
 
-Tell the user what you verified, which tool you used and why, the bounds, what the check found in plain words, how to run it, and what it does not cover. Suggest a second target only if you found a close one. If `/maintain-formal-verification-skill` is available, point the user at it for bringing verification back in line after unchecked changes. Otherwise, direct them to the generated skill's coverage record and update instructions.
+Tell the user what you verified, which tool you used and why, the bounds, what the check found in plain words, how to run it, and what it does not cover. Suggest a second target only if you found a close one. Point the user at `maintaining-formal-verification-skills` for bringing verification back in line after unchecked changes.
 
 ## Provenance
 
-Adapted from [pstack's create-formal-verification-skill](https://github.com/cursor/plugins/blob/6b0300214a09fd6029cfb7077043125758cd1fd2/pstack/skills/create-formal-verification-skill/SKILL.md). Copyright (c) 2026 Lauren Tan, licensed under MIT; see [LICENSE](LICENSE). This adaptation renames the skill, enables conditional discovery, and makes companion pstack skills optional.
+Adapted from [pstack's create-formal-verification-skill](https://github.com/cursor/plugins/blob/6b0300214a09fd6029cfb7077043125758cd1fd2/pstack/skills/create-formal-verification-skill/SKILL.md). Copyright (c) 2026 Lauren Tan, licensed under MIT; see [LICENSE](LICENSE). This adaptation renames the skill and its companion references and enables conditional discovery.
