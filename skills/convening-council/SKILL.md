@@ -2,10 +2,6 @@
 name: convening-council
 description: "Convenes three independent models to review code or advise on a decision, reconciles their findings, and tracks review rounds. Use when the user asks for council or a multi-model council review."
 license: MIT
-metadata:
-  upstream: https://github.com/t3dotgg/tstack/blob/1085050f3baed1ac724caa4a8166145fb2ac88af/skills/council/SKILL.md
-  author: Theo Browne
-  adapted-by: gafemoyano
 ---
 
 # Council
@@ -55,29 +51,3 @@ Lead with the conclusion, accepted findings, verification, and unresolved risks.
 Use only rounds and scores that actually occurred. For advice, report recommendations and disagreements instead of a score table.
 
 If the task includes an authorized PR creation or description update, add a `## Council review` section with the round count and table. Read the current description first and preserve others' content. Do not post a separate review-summary comment. Otherwise report in the final reply; requesting council alone does not authorize changing a PR, committing, or pushing.
-
-## Attribution and license
-
-Adapted from Theo Browne's [council skill](https://github.com/t3dotgg/tstack/blob/1085050f3baed1ac724caa4a8166145fb2ac88af/skills/council/SKILL.md) in t3dotgg/tstack. The upstream MIT notice is retained below; this adaptation uses the same license.
-
-MIT License
-
-Copyright (c) 2026 Theo Browne
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.

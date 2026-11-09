@@ -8,7 +8,7 @@ description: "Add or update personal skills, references, or always-on principles
 This skill lives in the personal skills Git repository. Resolve the repository root two directories above this skill directory, following symlinks. Do not assume the checkout is always at ~/skills.
 
 1. Read README.md and AGENTS.md at the repository root.
-2. Put each skill in skills/<name>/SKILL.md with matching lowercase-hyphen name and a clear description of when it applies. Preserve supplied instructions; record upstream attribution/license if known. Ask for missing provenance before publishing externally.
+2. Put each skill in skills/<name>/SKILL.md with matching lowercase-hyphen name and a clear description of when it applies. Preserve supplied instructions.
 3. Remove disable-model-invocation when automatic selection is desired. Automatic selection is not always-on: only add a skill name to always-on.json when the user wants its full text included in every session.
 4. Keep supplementary Markdown in that skill's references/ directory and link to it with reading instructions.
 5. Use Ruby for scripts by default; use Rust when portability calls for it. Run ruby tests/test_install.rb, then ruby scripts/install.rb. The installer discovers all skills automatically; do not maintain a separate skill link list.

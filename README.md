@@ -52,14 +52,6 @@ Ask an agent to use the maintain-skills skill, or:
 
 In Pi run /reload. Restart other agents to ensure discovery.
 
-## Provenance
-
-The design-red-flags, testing, boundary-discipline, and model-the-domain texts were supplied by the user from an unspecified third-party source. Upstream URL, author, and license are pending. No ownership or redistribution license is asserted for that text. Keep this repository private pending a license review.
-
-The antfu-simplify text was supplied by the user, attributed to Anthony Fu, version 2026.10.31. Its upstream URL and license are pending; the same private-repository restriction applies.
-
-The convening-council skill adapts [Theo Browne's council skill](https://github.com/t3dotgg/tstack/blob/1085050f3baed1ac724caa4a8166145fb2ac88af/skills/council/SKILL.md) from t3dotgg/tstack under the MIT license. Its upstream copyright and license notice are retained in the skill. Ask for “council” to use it; it is not always-on.
-
 ## Uninstall
 
 Remove only symlinks pointing into this checkout and the <!-- agent-kit:begin --> through <!-- agent-kit:end --> blocks in personal instruction files. The installer intentionally does not prune links for deleted/renamed skills; remove those links explicitly.

@@ -41,7 +41,3 @@ Follow the generated skill once, as the next agent would, on a scratch change th
 ## Hand off
 
 Tell the user what you verified, which tool you used and why, the bounds, what the check found in plain words, how to run it, and what it does not cover. Suggest a second target only if you found a close one. Point the user at `maintaining-formal-verification-skills` for bringing verification back in line after unchecked changes.
-
-## Provenance
-
-Adapted from [pstack's create-formal-verification-skill](https://github.com/cursor/plugins/blob/6b0300214a09fd6029cfb7077043125758cd1fd2/pstack/skills/create-formal-verification-skill/SKILL.md). Copyright (c) 2026 Lauren Tan, licensed under MIT; see [LICENSE](LICENSE). This adaptation renames the skill and its companion references and enables conditional discovery.

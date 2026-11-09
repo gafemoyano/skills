@@ -56,7 +56,3 @@ Tell the user, for each check:
 Say outright which failures were drift in the verification and which were bugs in the code. For a check that passed before you updated it and fails after, say that the old pass was on a stale description.
 
 Put the verification updates in a change of their own, separate from any product fix.
-
-## Provenance
-
-Adapted from [pstack's maintain-formal-verification-skill](https://github.com/cursor/plugins/blob/6b0300214a09fd6029cfb7077043125758cd1fd2/pstack/skills/maintain-formal-verification-skill/SKILL.md). Copyright (c) 2026 Lauren Tan, MIT; see [LICENSE](LICENSE). This adaptation renames the skill and its companion references and enables conditional discovery.

@@ -80,7 +80,3 @@ In Amp, use the `creating-views` skill to present the checked states and transit
 Give each chart to the person who must decide, with Mermaid text when requested. Add one line for each bug: the rule, the reader's sentence for that rule, and the path as the report numbers it. Say what the model leaves out. Give the command that makes the files again, with a new `--out` folder.
 
 When the model describes code, replay each bug path against the real code, as a test or a live repro, one step for each action. If a bug does not occur, think that the model is wrong until you show that it is not.
-
-## Provenance
-
-Adapted from [pstack's statechart](https://github.com/cursor/plugins/tree/6b0300214a09fd6029cfb7077043125758cd1fd2/pstack/skills/statechart). Copyright (c) 2026 Lauren Tan, MIT; see [LICENSE](LICENSE). Scripts, tests, and rendering reference are preserved upstream; this guide adapts naming, discovery, runtime guidance, and Amp presentation.
