@@ -26,7 +26,19 @@ always-on.json selects skill bodies to embed into:
 
 Existing AGENTS.override.md files take precedence where applicable. Only the managed block (using the original agent-kit markers for compatibility) is updated; existing content is preserved. Before the first modification of an existing instruction file, the installer saves a .pre-agent-kit.bak copy.
 
-The testing principle is always-on. Design red flags, boundary discipline, and model the domain are conditional.
+The testing principle and [visual proof for UI PRs](skills/pr-visual-proof/SKILL.md) are always-on. Design red flags, boundary discipline, and model the domain are conditional.
+
+## Guidance hierarchy
+
+Use a small tree of scope, not copies of the same skill:
+
+1. **Personal/global:** canonical skills live in `skills/<name>/SKILL.md`; the installer makes them discoverable across agents. `always-on.json` selects root rules.
+2. **Workspace:** its `AGENTS.md` points to relevant skills. Link a personal skill into workspace guidance instead of copying it; keep work-specific skills in the workspace.
+3. **Repository:** its `AGENTS.md` supplies local commands, conventions and artifact locations.
+
+Skill directories do not have universal inheritance across harnesses. Explicit
+instruction-file pointers provide the hierarchy; installed global discovery also
+covers agents that stop scanning at a Git root. Keep links valid on each machine.
 
 ## Scripting
 

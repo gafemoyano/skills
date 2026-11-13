@@ -32,6 +32,7 @@ class InstallerTest < Minitest::Test
       INSTRUCTIONS.each do |relative|
         text = home.join(relative).read
         assert_includes text, '# Test Behavior, Not Implementation'
+        assert_includes text, '# Visual proof for UI PRs'
         refute_includes text, '# Design red flags'
         refute_includes text, 'description:'
       end
